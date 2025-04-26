@@ -37,7 +37,7 @@ function getApiProduct() {
 
 
 // Sale Product
-export function displaySaleProducts(data) {
+function displaySaleProducts(data) {
     const sale_product = document.getElementById("hot_deal_products");
 
     let products = '';
@@ -86,8 +86,6 @@ export function displaySaleProducts(data) {
     });
 
     sale_product.innerHTML = products;
-
-
 }
 
 
@@ -139,12 +137,9 @@ function displayProducts(data, cat) {
                 </div>
             </div>
         `}
-        
-        
     });
 
     parent.innerHTML = products;
-
 }
 
 
@@ -168,9 +163,6 @@ function saveToLocalStorage(data, buttons) {
             e.target.classList.replace('add', 'in-cart');
 
             e.target.innerHTML = `<i class="fa-solid fa-cart-shopping"></i> Item in cart`
-            // console.log();
-            
         });
     });
-    
 }

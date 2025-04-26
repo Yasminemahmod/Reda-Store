@@ -56,8 +56,6 @@ function getApiProduct() {
                 onloadDisplayProd();
             });
         })
-        // console.log(addBtns);
-        // console.log(cartProducts);
 
 
         // display Products In Cart
@@ -171,8 +169,6 @@ function deacreaseCartProduct(btns, inCartBtns) {
 
             getApiProduct();
 
-
-
         });
     });
 }
@@ -204,7 +200,6 @@ function deleteCartProduct(btns, inCartBtns) {
             let btn = inCartBtns.find(btn =>  btn.dataset.id == e.target.parentElement.dataset.id);
             btn.classList.replace('in-cart', 'add');
             btn.innerHTML = `<i class="fa-solid fa-cart-shopping"></i> Add to cart`;
-            
         });
     });
 }

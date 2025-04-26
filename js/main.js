@@ -1,4 +1,4 @@
-"use strict";
+
 
 //  =============== Global Variables ===============
 // Header
@@ -143,28 +143,3 @@ window.onresize = () => {
         lower_footer.style.justifyContent = "center";
     }
 }
-
-
-
-
-// // Retrieve Data From Local Storage If Exist
-// export function onloadDisplayProd() {
-//     if(localStorage.getItem("cart") !== null) {
-//         cartProducts = JSON.parse(localStorage.getItem("cart"));
-//     }
-//     getApiProduct();
-// }
-// onloadDisplayProd();
-
-
-
-// Get Products From Api
-// function getApiProduct() {
-//     fetch('../products.json')
-//         .then(response => response.json())
-//         .then(data => {
-//             displayData(data);
-//         });
-// }
-
-
