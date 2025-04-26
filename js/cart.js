@@ -42,7 +42,7 @@ onloadDisplayProd();
 
 // Get Products From Api
 function getApiProduct() {
-    fetch('../products.json')
+    fetch('https://yasminemahmod.github.io/Reda-Store/products.json')
     .then(res => res.json())
     .then(data => {
         let addBtns = Array.from(document.querySelectorAll(".cart.add"));

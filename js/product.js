@@ -15,7 +15,7 @@ onloadDisplayProd();
 
 // Get Products From Api
 function getApiProduct() {
-    fetch('../products.json')
+    fetch('https://yasminemahmod.github.io/Reda-Store/products.json')
         .then(response => response.json())
         .then(data => {
 
@@ -93,7 +93,7 @@ export function displaySaleProducts(data) {
 
 
 // Categoried Product
-function displayProducts(data, cat, button) {
+function displayProducts(data, cat) {
     const parent = document.getElementById(`${cat}_products`);
 
     let products = '';
