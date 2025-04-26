@@ -1,0 +1,249 @@
+/* ============ Start Global ============ */
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+:root {
+  --main-color: #fe8615;
+  --white-color: #fff;
+  --p-color: #7b7b7b;
+  --bg-color: #f3f3f3;
+  --heading-color: #121416;
+  --border-color: #e5e5e5d5;
+  --sale-color: #e51a1a;
+  --swiper-navigation-size: 13px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  scroll-behavior: smooth;
+}
+
+p {
+  color: var(--p-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--heading-color);
+  font-family: "DM Sans", sans-serif;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+button,
+select {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+img {
+  width: 100%;
+  vertical-align: middle;
+}
+
+/* Start Swiper */
+section .container .deals .deal-box {
+  margin-top: 50px;
+  border: 1px solid var(--border-color);
+  padding: 15px;
+  box-shadow: 5px 5px 10px 0px #ededed;
+  border-radius: 5px;
+}
+section .container .deals .deal-box .deal {
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  right: 0;
+  background-color: #ED0505;
+  color: var(--white-color);
+  padding: 5px 10px;
+  font-size: 13px;
+  left: calc(100% - 45px);
+}
+section .container .deals .deal-box .img {
+  display: block;
+  padding: 15px 0 30px;
+  transition: 0.3s;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+section .container .deals .deal-box .img img {
+  width: auto;
+  height: 100%;
+}
+section .container .deals .deal-box:hover .img {
+  transform: scale(1.1);
+}
+section .container .deals .deal-box .rate {
+  color: var(--main-color);
+}
+section .container .deals .deal-box .product-info {
+  height: 33px;
+  font-size: 14px;
+  color: rgba(18, 20, 22, 0.9411764706);
+  margin: 12px 0;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+section .container .deals .deal-box .price .after-disc {
+  font-weight: bold;
+  color: var(--main-color);
+  margin-right: 10px;
+}
+section .container .deals .deal-box .price .main-price {
+  color: var(--p-color);
+  font-size: 13px;
+  text-decoration: line-through;
+}
+section .container .deals .deal-box .product-btns {
+  margin-top: 15px;
+  display: flex;
+}
+section .container .deals .deal-box .product-btns .btn {
+  -wibkit-transition: 0.3s;
+  transition: 0.3s;
+}
+section .container .deals .deal-box .product-btns .cart {
+  border: 1px solid var(--main-color);
+  background-color: var(--main-color);
+  color: var(--bg-color);
+  padding: 10px;
+}
+section .container .deals .deal-box .product-btns .cart.in-cart {
+  background-color: var(--white-color);
+  cursor: auto;
+  color: var(--heading-color);
+}
+section .container .deals .deal-box .product-btns .cart.in-cart i {
+  color: var(--main-color);
+}
+section .container .deals .deal-box .product-btns .cart.add:hover {
+  -wibkit-transform: scale(1.05);
+  transform: scale(1.05);
+  background-color: #f47600;
+}
+section .container .deals .deal-box .product-btns .favorite {
+  padding: 10px 12px;
+  font-size: 15px;
+  border: 1px solid var(--border-color);
+  background-color: var(--white-color);
+  margin-left: 10px;
+}
+section .container .deals .deal-box .product-btns .favorite:hover {
+  background-color: var(--main-color);
+  color: var(--white-color);
+}
+section .container .pre-orders {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(347px, 1fr));
+  margin-top: 80px;
+  gap: 15px;
+}
+
+/* =========== Start Footer ========== */
+footer .upper-footer {
+  background-color: var(--heading-color);
+  padding: 40px 0;
+}
+footer .upper-footer .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(198px, 1fr));
+  gap: 35px;
+}
+footer .upper-footer .container .info .logo {
+  width: 180px;
+}
+footer .upper-footer .container .info p {
+  margin: 15px 0;
+}
+footer .upper-footer .container .info .social {
+  display: flex;
+}
+footer .upper-footer .container .info .social a {
+  color: var(--white-color);
+  background-color: var(--main-color);
+  font-size: 22px;
+  width: 40px;
+  height: 40px;
+  display: block;
+  line-height: 40px;
+  text-align: center;
+  margin-right: 10px;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+footer .upper-footer .container .info .social a:hover {
+  transform: translateY(-5px);
+}
+footer .upper-footer .container p, footer .upper-footer .container a {
+  color: #b1b1b1;
+  line-height: 1.4;
+  font-size: 14px;
+}
+footer .upper-footer .container h4 {
+  color: var(--white-color);
+  margin-bottom: 15px;
+  font-size: 19px;
+}
+footer .upper-footer .container ul li a {
+  display: block;
+  margin-bottom: 5px;
+  margin-left: 15px;
+  position: relative;
+  transition: 0.3s;
+}
+footer .upper-footer .container ul li a::before {
+  content: "";
+  position: absolute;
+  left: -15px;
+  top: 50%;
+  border: 6px solid;
+  border-color: transparent transparent transparent var(--main-color);
+  border-radius: 3px;
+  transform: translateY(-50%);
+}
+footer .upper-footer .container ul li a:hover {
+  transform: translateX(7px);
+  color: var(--main-color);
+}
+footer .lower-footer {
+  background-color: #1d1f22;
+}
+footer .lower-footer .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 10px 0;
+  gap: 15px;
+}
+footer .lower-footer .container .rights, footer .lower-footer .container .payment {
+  width: 350px;
+  font-weight: 400;
+  color: var(--white-color);
+  text-align: center;
+}
+footer .lower-footer .container .rights span, footer .lower-footer .container .payment span {
+  color: var(--main-color);
+}/*# sourceMappingURL=footer.css.map */

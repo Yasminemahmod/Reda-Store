@@ -1,0 +1,54 @@
+
+// Prefexer
+@mixin prefexer($property, $value, $prefexes: ()) {
+    @each $prefex in $prefexes {
+        #{'-' + $prefex + '-' + $property} : $value;
+    }
+    #{$property} : $value;
+}
+
+
+// Animation
+@mixin animation($name) {
+    @keyframes #{$name} {
+        @content;
+    }
+}
+
+
+// Responsive
+@mixin media($max, $min) {
+    @media (min-width: #{$min}) and (max-width: #{$max}) {
+        @content;
+    }
+}
+@mixin maxMedia($max) {
+    @media (max-width: #{$max}) {
+        @content;
+    }
+}
+@mixin minMedia($min) {
+    @media (min-width: #{$min}) {
+        @content;
+    }
+}
+
+
+
+
+// Fit position
+@mixin fit($position, $top, $left, $width, $height) {
+    position: $position;
+    top: $top;
+    left: $left;
+    width: $width;
+    height: $height;
+}
+
+
+// Flex
+@mixin flex($justify) {
+    display: flex;
+    align-items: center;
+    justify-content: $justify;
+}

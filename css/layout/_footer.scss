@@ -1,0 +1,92 @@
+/* =========== Start Footer ========== */
+footer {
+    .upper-footer {
+        background-color: var(--heading-color);
+        padding: 40px 0;
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(198px , 1fr));
+            gap: 35px;
+            .info {
+                .logo {
+                    width: 180px;
+                }
+                p {
+                    margin: 15px 0;
+                }
+                .social {
+                    display: flex;
+                    a {
+                        color: var(--white-color);
+                        background-color: var(--main-color);
+                        font-size: 22px;
+                        width: 40px;
+                        height: 40px;
+                        display: block;
+                        line-height: 40px;
+                        text-align: center;
+                        margin-right: 10px;
+                        @include prefexer(border-radius, 3px , webkit moz ms o);
+                        @include prefexer(transition, 0.3s , webkit moz ms o);
+                        &:hover {
+                            @include prefexer(transform, translateY(-5px) , webkit moz ms o);
+                        }
+                    }
+                }
+            }
+            p, a {
+                color: #b1b1b1;
+                line-height: 1.4;
+                font-size: 14px;
+            }
+            h4 {
+                color: var(--white-color);
+                margin-bottom: 15px;
+                font-size: 19px;
+            }
+            ul {
+                li {
+                    a {
+                        display: block;
+                        margin-bottom: 5px;
+                        margin-left: 15px;
+                        position: relative;
+                        @include prefexer(transition, 0.3s , webkit moz ms o);
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            left: -15px;
+                            top: 50%;
+                            border: 6px solid;
+                            border-color: transparent transparent transparent var(--main-color);
+                            @include prefexer(border-radius, 3px , webkit moz ms o);
+                            @include prefexer(transform, translateY(-50%) , webkit moz ms o);
+                        }
+                        &:hover {
+                            @include prefexer(transform, translateX(7px) , webkit moz ms o);
+                            color: var(--main-color);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .lower-footer {
+        background-color: #1d1f22;
+        .container {
+            @include flex(space-between);
+            flex-wrap: wrap;
+            padding: 10px 0;
+            gap: 15px;
+            .rights, .payment {
+                width: 350px;
+                font-weight: 400;
+                color: var(--white-color);
+                text-align: center;
+                span {
+                    color: var(--main-color);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,171 @@
+/* ============ Start Global ============ */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --main-color: #fe8615;
+    --white-color: #fff;
+    --p-color: #7b7b7b;
+    --bg-color: #f3f3f3;
+    --heading-color: #121416;
+    --border-color: #e5e5e5d5;
+    --sale-color: #e51a1a;
+    --swiper-navigation-size: 13px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    scroll-behavior: smooth;
+}
+
+p {
+    color: var(--p-color);
+}
+
+h1,h2,h3,h4,h5,h6 {
+    color: var(--heading-color);
+    font-family: "DM Sans", sans-serif;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+input,
+button,
+select {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+
+/* Start Swiper */
+section {
+    .container {
+        .deals {
+            .deal-box {
+                margin-top: 50px;
+                border: 1px solid var(--border-color);
+                padding: 15px;
+                box-shadow: 5px 5px 10px 0px #ededed;
+                @include prefexer(border-radius, 5px, webkit moz ms o);
+                .deal {
+                    width: fit-content;
+                    position: relative;
+                    right: 0;
+                    background-color: #ED0505;
+                    color: var(--white-color);
+                    padding: 5px 10px;
+                    font-size: 13px;
+                    left: calc(100% - 45px);
+                }
+                .img {
+                    display: block;
+                    padding: 15px 0 30px;
+                    @include prefexer(transition, 0.3s, webkit moz ms o);
+                    height: 180px;
+                    @include flex(center);
+                    img {
+                        width: auto;
+                        height: 100%;
+                    }
+                }
+                &:hover .img {
+                    @include prefexer(transform, scale(1.1), webkit moz ms o);
+                }
+                .rate {
+                    color: var(--main-color);
+                }
+                .product-info {
+                    height: 33px;
+                    font-size: 14px;
+                    color: #121416f0;
+                    margin: 12px 0;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+
+                }
+                .price {
+                    .after-disc {
+                        font-weight: bold;
+                        color: var(--main-color);
+                        margin-right: 10px;
+                    }
+                    .main-price {
+                        color: var(--p-color);
+                        font-size: 13px;
+                        text-decoration: line-through;
+                    }
+                }
+                .product-btns {
+                    margin-top: 15px;
+                    display: flex;
+                    .btn {
+                        @include prefexer(transition, 0.3s , wibkit moz ms o);
+                    }
+                    .cart {
+                        border: 1px solid var(--main-color);
+                        background-color: var(--main-color);
+                        color: var(--bg-color);
+                        padding: 10px;
+                        &.in-cart {
+                            background-color: var(--white-color);
+                            cursor: auto;
+                            color: var(--heading-color);
+                            i {
+                                color: var(--main-color);
+                            }
+                        }
+                        &.add:hover {
+                            @include prefexer(transform, scale(1.05), wibkit moz ms o);
+                            background-color: #f47600;
+                        }
+                    }
+                    .favorite {
+                        padding: 10px 12px;
+                        font-size: 15px;
+                        border: 1px solid var(--border-color);
+                        background-color: var(--white-color);
+                        margin-left: 10px;
+                        &:hover {
+                            background-color: var(--main-color);
+                            color: var(--white-color);
+                        }
+                    }
+                }
+            }
+        }
+
+        .pre-orders {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(347px, 1fr));
+            margin-top: 80px;
+            gap: 15px;
+        }
+    }
+}
+
+
